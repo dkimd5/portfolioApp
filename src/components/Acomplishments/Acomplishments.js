@@ -10,10 +10,20 @@ const data = [
   { number: 5000, text: 'Github Stars', }
 ];
 
+//TODO: move data to constants
+
 const Acomplishments = () => (
-  <div>
-    Acomplishments
-  </div>
+  <Section>
+    <SectionTitle>Personal Achievements</SectionTitle>
+    <Boxes>
+      {data.map((card, index) => (
+        <Box key={ index }>
+          <BoxNum>{ card.number }+</BoxNum>
+          <BoxText>{ card.text }</BoxText>
+        </Box>
+      ))}
+    </Boxes>
+  </Section>
 );
 
 export default Acomplishments;
